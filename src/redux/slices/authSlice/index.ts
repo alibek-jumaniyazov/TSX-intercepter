@@ -3,11 +3,12 @@ import { AuthState } from "../../../types/redux";
 
 
 const initialState: AuthState = {
-    accessToken: null,
+    accessToken:  null,
     refreshToken: null,
+    roles: []
 };
 
-export const authState = createSlice({
+export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
@@ -18,7 +19,10 @@ export const authState = createSlice({
             return (state = {
                 accessToken: null,
                 refreshToken: null,
+                roles: []
             });
         },
     },
 });
+
+export const { setAuth, clearAuth } = authSlice.actions;

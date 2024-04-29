@@ -1,4 +1,6 @@
-export { HomePage } from "./home/index";
-export { LoginPage } from './login/index';
-export { SignUp } from './signup/index';
-export { ProfilePage } from './profile/index';
+import { lazy } from "react";
+
+export const LoginPage = lazy(() => import("./login"));
+export const SignUp = lazy(() => import("./signup"));
+export const ProfilePage = lazy(() => import("./profile"));
+export const HomePage = lazy(() => import("./home"));

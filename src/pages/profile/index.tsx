@@ -1,8 +1,5 @@
 
-type Props = {}
 
-export  function ProfilePage({}: Props) {
-  return (
-    <div>ProfilePage</div>
-  )
+export default function ProfilePage() {
+    return <div>ProfilePage</div>;
 }

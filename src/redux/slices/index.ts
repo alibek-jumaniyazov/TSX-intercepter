@@ -1,1 +1,1 @@
-export {authState} from './authSlice/index';
+export { authSlice } from "./authSlice/index";
