@@ -4,7 +4,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCreatePublic } from "../../hooks/use-query";
-import {  loginUrl } from "../../utils/urls";
+import {  baseURL, loginUrl } from "../../utils/urls";
 import { setAuth } from "../../redux/slices/authSlice";
 
 const FormScheme = z.object({
@@ -29,7 +29,7 @@ export default function LoginPage() {
     const { mutate, isLoading } = useCreatePublic<
         TUserResponse,
         z.infer<typeof FormScheme>
-    >(loginUrl);
+    >(baseURL + loginUrl);
     function onSumbit(values: z.infer<typeof FormScheme>) {
         mutate(values, {
             onSuccess: (response) => {

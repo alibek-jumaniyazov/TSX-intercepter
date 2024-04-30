@@ -7,14 +7,12 @@ export function useAxios() {
     const { accessToken } = useSelector((state) => state.auth);
 
     const axiosPublic = axios.create({
-        baseURL,
         headers: {
             "Content-Type": "application/json",
         },
     });
 
     const axiosPrivate = axios.create({
-        baseURL,
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${accessToken}`,
