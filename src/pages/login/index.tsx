@@ -61,7 +61,7 @@ export default function LoginPage() {
                 </button>
             </form>
             <h1>
-                go to <Link to="sign-up">Sign Up</Link>
+                go to <Link to="/sign-up">Sign Up</Link>
             </h1>
         </div>
     );
